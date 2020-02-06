@@ -1,4 +1,4 @@
-B#include <stdio.h>
+#include <stdio.h>
 /**
  * main - print size of the project
  * Return:0
