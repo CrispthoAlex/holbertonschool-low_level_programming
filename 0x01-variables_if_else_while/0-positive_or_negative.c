@@ -1,9 +1,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
-/* Description: Project Variables, if, else, while  */
-
-/* main - print random number and say positive, negative or zero */
+/**
+ * main - print random number and say positve, negative or zero
+ * Return:0
+ */
 int main(void)
 {
 int n;
