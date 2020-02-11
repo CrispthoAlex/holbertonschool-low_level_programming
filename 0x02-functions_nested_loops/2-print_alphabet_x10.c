@@ -6,17 +6,16 @@
  */
 void print_alphabet_x10(void) /* print alphabet X10 - Rename this function */
 {
-	char ho[27] = "abcdefghijklmnopqrstuvwxyz";
+	char ho[] = "abcdefghijklmnopqrstuvwxyz";
 	int i;
 	int j;
 
-	for (j = 1; j <= 10; j++)
+	for (j = 0; j <= 9; j++)
 	{
-	for (i = 0; i <= 27; i++)
+	for (i = 0; i <= 26; i++)
 	{
 		_putchar(ho[i]);
 	}
 	_putchar('\n');
 	}
 }
-
