@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  * _islower - checks is lower
- * @c - type char, from 3-main.c | checks is lower
+ * @c: The character to print
  * Return: always 0.
  */
 int _islower(int c)
