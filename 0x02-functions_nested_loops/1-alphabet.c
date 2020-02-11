@@ -6,10 +6,10 @@
  */
 void print_alphabet(void)
 {
-	char ho[27] = "abcdefghijklmnopqrstuvwxyz";
+	char ho[26] = "abcdefghijklmnopqrstuvwxyz";
 	int i;
 
-	for (i = 0; i <= 27; i++)
+	for (i = 0; i <= 26; i++)
 	{
 		_putchar(ho[i]);
 	}
