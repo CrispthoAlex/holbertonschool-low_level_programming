@@ -6,7 +6,7 @@
  */
 void print_alphabet(void)
 {
-	char ho[26] = "abcdefghijklmnopqrstuvwxyz";
+	char ho[] = "abcdefghijklmnopqrstuvwxyz";
 	int i;
 
 	for (i = 0; i <= 26; i++)
