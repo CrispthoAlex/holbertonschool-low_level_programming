@@ -7,6 +7,7 @@ int _isalpha(int c); /* task 04 isalpha  */
 int print_sign(int n); /* task 05 sig of number */
 int _abs(int i); /* task 06 absolute value of an integer */
 int print_last_digit(int n); /* 07 - last digit */
-void jack_bauer(void); /* every minute of the day of Jack Bauer  */
-void times_table(void); /* prints the 9 times table, starting with 0 */
-int add(int i, int j); /* adds two integers and returns the result */
+void jack_bauer(void); /* task 8 every minute of the day of Jack Bauer  */
+void times_table(void); /* task 9 prints the 9 times table, starting with 0 */
+int add(int i, int j); /* task 10 adds two integers and returns the result */
+void print_to_98(int n); /* prints all natural numbers from n to 98 */
