@@ -3,7 +3,7 @@
 /**
  * print_to_98 - natural number
  * @n: enter first number
- * Return: result
+ * Return: void
  */
 
 void print_to_98(int n)
