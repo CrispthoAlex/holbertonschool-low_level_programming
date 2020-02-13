@@ -9,4 +9,5 @@ int _isdigit(int c); /* 1 is digit */
 int mul(int a, int b); /* 2 multiplication  */
 void print_numbers(void); /* 3 numbers speak, 0-9 */
 void print_most_numbers(void); /* 4 more numbers, not 2 and 4 */
+void more_numbers(void); /*5. Numbers universal language */
 #endif /* HOLBERTON_H */
