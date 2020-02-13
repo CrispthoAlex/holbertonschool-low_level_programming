@@ -16,23 +16,24 @@ int main(void)
 	{
 		j = i % 3; /* multiplos de 3*/
 		k = i % 5; /* multiplos de 5*/
+
 		if (i != 1)
-			putchar(' ');
-		if ((j == 0) && (k == 0)) /* print 3X or 5X */
+			putchar(' '); /* print space before number or string*/
+		if ((j == 0) && (k == 0)) /* print 3X & 5X */
 		{
-			printf("FIZZBUZZ");
+			printf("FizzBuzz");
 		}
 		else if (j == 0)
 		{
-			printf("FIZZ");
+			printf("Fizz"); /* print 3X */
 		}
 		else if (k == 0)
 		{
-			printf("BUZZ");
+			printf("Buzz"); /* print 5X */
 		}
 		else
-			printf("%d", i);
-	}
-	putchar ('\n');
+			printf("%d", i); /* print not 3X or 5X */
+		}
+	putchar('\n');
 return (0);
 }
