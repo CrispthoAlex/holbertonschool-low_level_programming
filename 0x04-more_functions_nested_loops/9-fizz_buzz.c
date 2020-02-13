@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 /**
- * fizz-buzz - check the code for Holberton School students.
+ * main - check the code for Holberton School students.
  *
  *
  * Return: Always 0.
  */
-int main (void)
+int main(void)
 {
 	int i;
 	int j;
@@ -19,18 +19,18 @@ int main (void)
 
 		if ((j == 0) && (k == 0)) /* print 3X or 5X */
 		{
-			printf ("FIZZBUZZ ");
+			printf("FIZZBUZZ ");
 		}
 		else if (j == 0)
 		{
-			printf ("FIZZ ");
+			printf("FIZZ ");
 		}
 		else if (k == 0)
 		{
-			printf ("BUZZ ");
+			printf("BUZZ ");
 		}
 		else
-			printf ("%d ", i);
+			printf("%d ", i);
 	}
 	putchar ('\n');
 return (0);
