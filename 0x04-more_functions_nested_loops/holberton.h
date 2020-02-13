@@ -3,5 +3,6 @@
 
 #include <stdio.h>
 
-int _isupper(int c); /* task 0 is supper  */
+int _isupper(int c); /* 0 is supper  */
+int _isdigit(int c); /* 1 is digit */
 #endif /* HOLBERTON_H */
