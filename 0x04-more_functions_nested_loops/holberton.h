@@ -12,4 +12,5 @@ void print_most_numbers(void); /* 4 more numbers, not 2 and 4 */
 void more_numbers(void); /*5. Numbers universal language */
 void print_line(int n); /*6 print line */
 void print_diagonal(int n); /* 7. I feel like I am diagonally  */
+void print_square(int s);
 #endif /* HOLBERTON_H */
