@@ -16,21 +16,22 @@ int main(void)
 	{
 		j = i % 3; /* multiplos de 3*/
 		k = i % 5; /* multiplos de 5*/
-
+		if (i != 1)
+			putchar(' ');
 		if ((j == 0) && (k == 0)) /* print 3X or 5X */
 		{
-			printf("FIZZBUZZ ");
+			printf("FIZZBUZZ");
 		}
 		else if (j == 0)
 		{
-			printf("FIZZ ");
+			printf("FIZZ");
 		}
 		else if (k == 0)
 		{
-			printf("BUZZ ");
+			printf("BUZZ");
 		}
 		else
-			printf("%d ", i);
+			printf("%d", i);
 	}
 	putchar ('\n');
 return (0);
