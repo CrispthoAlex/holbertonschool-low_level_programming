@@ -9,6 +9,9 @@
  */
 void swap_int(int *a, int *b)
 {
-	*a = 42;
-	*b = 98;
+	int t; /* variable temporal */
+
+	t = *a; /* keep temporal t = 98 */
+	*a = *b; /* *a = 42 */
+	*b = t; /* *b = 98 */
 }
