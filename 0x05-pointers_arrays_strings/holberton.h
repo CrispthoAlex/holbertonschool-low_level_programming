@@ -9,4 +9,5 @@ void swap_int(int *a, int *b); /* 1 - swaps the values of two integers */
 int _strlen(char *s); /* 2 - returns the length of a string */
 void _puts(char *str); /* 3 - prints a string, followed by a new line */
 void print_rev(char *s); /* 4 - print reverse, followed new line */
+void rev_string(char *s); /* 5 - reverses a string */
 #endif /* HOLBERTON_H */
