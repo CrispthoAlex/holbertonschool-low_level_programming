@@ -17,13 +17,14 @@ void puts_half(char *str)
 	{
 		i++; /* count */
 	}
+	i++;
 	if (i % 2 == 0)
 	{
 		j = (i / 2);
 	}
 	else
 	{
-		j = (i - 1) / 2 + 1; /* Decide what j = n to use  */
+		j = (i - 1) / 2; /* Decide what j = n to use  */
 	}
 	while (j < i)
 	{
