@@ -22,7 +22,9 @@ void puts_half(char *str)
 		j = (i / 2);
 	}
 	else
-		j = (i - 1) / 2 + 1; /* Decide what j = n to use  */
+	{
+		j = (i - 1) / 2; /* Decide what j = n to use  */
+	}
 	while (j < i)
 	{
 		_putchar(str[j]);
