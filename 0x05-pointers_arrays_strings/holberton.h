@@ -10,4 +10,6 @@ int _strlen(char *s); /* 2 - returns the length of a string */
 void _puts(char *str); /* 3 - prints a string, followed by a new line */
 void print_rev(char *s); /* 4 - print reverse, followed new line */
 void rev_string(char *s); /* 5 - reverses a string */
+void puts2(char *str); /* 6 - prints every other character of a string  */
+void puts_half(char *str); /* 7 - prints half of a string */
 #endif /* HOLBERTON_H */
