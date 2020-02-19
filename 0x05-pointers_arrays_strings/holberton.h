@@ -12,4 +12,5 @@ void print_rev(char *s); /* 4 - print reverse, followed new line */
 void rev_string(char *s); /* 5 - reverses a string */
 void puts2(char *str); /* 6 - prints every other character of a string  */
 void puts_half(char *str); /* 7 - prints half of a string */
+void print_array(int *a, int n); /* 8 - prints array  */
 #endif /* HOLBERTON_H */
