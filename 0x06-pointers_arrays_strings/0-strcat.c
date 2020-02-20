@@ -12,9 +12,6 @@ char *_strcat(char *dest, char *src)
 	int i;
 	int j; /* length dest */
 
-	/*dest = "Hello ";
-	  src = "World!\n";*/
-
 	i = 0;
 	while (dest[i] != '\0')
 	{
