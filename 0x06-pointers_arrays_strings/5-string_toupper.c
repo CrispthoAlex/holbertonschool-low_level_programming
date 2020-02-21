@@ -3,7 +3,7 @@
 
 /**
  * *string_toupper - lower to upper
- * @p: pointer to array
+ * @array: pointer to array
  *
  * Return: Always 0.
  */
