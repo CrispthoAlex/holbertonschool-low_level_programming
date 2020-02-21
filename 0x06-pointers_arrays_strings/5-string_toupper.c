@@ -7,17 +7,17 @@
  *
  * Return: Always 0.
  */
-char *string_toupper(char *p)
+char *string_toupper(char *array)
 {
 	int i;
 
 	i = 0; /* first count */
-	while (p[i] != '\0')
+	while (array[i] != '\0')
 	{
-		if (p[i] > 97 && p[i] < 122)
-			p[i] -= 32;
+		if (array[i] >= 97 && array[i] <= 122)
+			array[i] -= 32;
 		else
 		i++;
 	}
-	return (p);
+	return (array);
 }
