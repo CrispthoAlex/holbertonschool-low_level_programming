@@ -12,20 +12,14 @@ char *_strchr(char *s, char c)
 {
 	/**unsigned int i;*/
 
-	if (c == '\0') /* if c is NULL return s*/
+	for (; *s != '\0'; s++)
 	{
-		s = '\0';
-	}
-	else
-	{
-		for (; *s != '\0'; s++)
+		if (*s == c) /*compare each position*/
 		{
-			if (*s == c) /*compare each position*/
-			{
-				return (s);
-			}
+			return (s);
 		}
 	}
-
-	return (s);
+	if (c == '\0') /* if c is NULL return s*/
+		s = '\0';
+return (s);
 }
