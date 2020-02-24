@@ -20,6 +20,8 @@ char *_strchr(char *s, char c)
 		}
 	}
 	if (c == '\0') /* if c is NULL return s*/
-		s = '\0';
-return (s);
+		return (s);
+	s = '\0';
+
+	return (s);
 }
