@@ -8,4 +8,6 @@ char *_memset(char *s, char b, unsigned int n);/*0fillsmemorywithaconstantbyte*/
 char *_memcpy(char *dest, char *src, unsigned int n);/*1-copies memory area*/
 char *_strchr(char *s, char c);/*2-locates a character in a string*/
 unsigned int _strspn(char *s, char *accept);/*3-getslength of aprefixsubstring.*/
+char *_strpbrk(char *s, char *accept);/*4-searches astringforanyof a setofbytes*/
+char *_strstr(char *haystack, char *needle);/* locates a substring */
 #endif /* HOLBERTON_H */
