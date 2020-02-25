@@ -18,10 +18,10 @@ char *_strstr(char *haystack, char *needle)
 		n = i;
 		for (j = 0; haystack[i] == needle[j] && haystack[i] != '\0'
 			     && needle[j] != '\0'; i++, j++)
-		{
+			continue; /* verifie and continue */
+
+		if (needle[j] == '\0')
 			return (haystack += n);
-		}
 	}
-	/*haystack = 0;*/
 	return (0);
-} /* function end */
+}
