@@ -22,6 +22,6 @@ char *_strstr(char *haystack, char *needle)
 			return (haystack += n);
 		}
 	}
-	haystack = 0;
+	haystack = '\0';
 	return (haystack);
 } /* function end */
