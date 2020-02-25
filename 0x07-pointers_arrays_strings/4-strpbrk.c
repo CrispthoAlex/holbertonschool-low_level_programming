@@ -16,16 +16,12 @@ char *_strpbrk(char *s, char *accept)
 	{
 		for (j = 0; accept[j] != '\0'; j++)
 		{
-			if (accept[j] == s[i]) /*compare each position*/
+			if (s[i] == accept[j]) /*compare each position*/
 			{
 				return (s);/* */
 			}
 		}
 	}
-	if (accept[j] == s[i]) /* if accept is NULL return s*/
-	{
-		return (s);
-	}
-
-return (0);
+	s = 0;
+	return (s);
 } /* function end */
