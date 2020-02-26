@@ -11,16 +11,20 @@
 void print_diagsums(int *a, int size)
 {
 	int i, j;
-	int addi, addj = 0; /*var addition */
+	long int addi, addj = 0; /*var addition */
 
-	for (i = 0; i < (size * size) ; i += size + 1)
+	i = 0;
+	j = 0;
+	while (i < (size * size))
 	{
 		addi += a[i]; /* addition position i*/
+		i += size + 1;
 	}
-	for (j = size - 1; j < (size * size) - 1; j += size - 1)
+	j = size - 1;
+	while (j < (size * size) - 1 && j >= 0)
 	{
 		addj += a[j]; /* addition position j*/
+		j += size - 1;
 	}
-
-	printf("%d, %d\n", addi, addj);
+	printf("%li, %li\n", addi, addj);
 }
