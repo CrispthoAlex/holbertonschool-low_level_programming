@@ -11,7 +11,7 @@
 void print_diagsums(int *a, int size)
 {
 	int i, j;
-	int addi = 0, addj = 0; /*var addition */
+	int addi = 0, addj = 0; /*inicializate all var addition */
 
 	i = 0;
 	j = 0;
