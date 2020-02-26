@@ -11,7 +11,7 @@
 void print_diagsums(int *a, int size)
 {
 	int i, j;
-	unsigned int addi, addj = 0; /*var addition */
+	long int addi, addj = 0; /*var addition */
 
 	i = 0;
 	j = 0;
@@ -26,5 +26,5 @@ void print_diagsums(int *a, int size)
 		addj += a[j]; /* addition position j*/
 		j += size - 1;
 	}
-	printf("%u, %u\n", addi, addj);
+	printf("%li, %li\n", addi, addj);
 }
