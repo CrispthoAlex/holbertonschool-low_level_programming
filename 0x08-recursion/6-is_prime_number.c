@@ -4,13 +4,13 @@
  * _primex - return 1 prime 0 else
  * @n: number to verified if prime
  * @x: proub % and equal n
- * Return: natural square root x
+ * Return: if it's prime 1 else 0
  */
 int _primex(int n, int x)
 {
 	if (n == x) /*if itself */
 		return (1);
-	if (n % x == 0)/* verified multiplo */
+	if (n % x == 0)/* verified multiple */
 		return (0);
 	return (_primex(n, x + 1));
 }
