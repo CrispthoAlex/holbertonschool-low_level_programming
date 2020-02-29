@@ -24,7 +24,7 @@ void print_times_table(int n); /* task 12 print n times table */
 /* 0x03 */
 void positive_or_negative(int i);
 int largest_number(int a, int b, int c);
-void print_remaining_days();
+void print_remaining_days(int month, int day, int year);
 int convert_day(int month, int day);
 
 /* 0x04 */
@@ -63,26 +63,26 @@ char *string_toupper(char *); /* lowercase to uppercase*/
 char *leet(char *); /* encodes a string into 1337 */
 
 /* 0x07 */
-char *_memset(char *s, char b, unsigned int n);/*0fillsmemorywithaconstantbyte*/
+char *_memset(char *s, char b, unsigned int n);/*0fillmemorywithaconstantbyte*/
 char *_memcpy(char *dest, char *src, unsigned int n);/*1-copies memory area*/
 char *_strchr(char *s, char c);/*2-locates a character in a string*/
-unsigned int _strspn(char *s, char *accept);/*3-getslength of aprefixsubstring.*/
-char *_strpbrk(char *s, char *accept);/*4-searches astringforanyof a setofbytes*/
+unsigned int _strspn(char *s, char *accept);/*3-getslengthofaprefixsubstring*/
+char *_strpbrk(char *s, char *accept);/*4-searches astringforanyofasetofbytes*/
 char *_strstr(char *haystack, char *needle);/*5-locates a substring */
 void print_chessboard(char (*a)[8]); /* 6 prints the chessboard */
-void print_diagsums(int *a, int size); /*7-sum of the two diagonals of a
-square matrix of integers*/
-void set_string(char **s, char *to);/*8-sets the value of a pointer to a char */
+void print_diagsums(int *a, int size); /*7-sum of the two diagonalsof a */
+/*square matrix of integers*/
+void set_string(char **s, char *to);/*8-sets the valueof apointer toachar*/
 
 /* 0x08 */
 void _puts_recursion(char *s);/*0- prints a string, followed by a new line*/
 void _print_rev_recursion(char *s);/* 1- prints a string in reverse*/
 int _strlen_recursion(char *s);/*2- returns the length of a string*/
 int factorial(int n);/*3- returns the factorial of a given number*/
-int _pow_recursion(int x, int y);/*4- returns the value of x raised to the power of y*/
+int _pow_recursion(int x, int y);/*4-returnsthevalueofxraisedtothepowerofy*/
 int _sqrt_recursion(int n);/*5- returns the natural square root of a number*/
-int is_prime_number(int n);/*6- returns 1 if the input integer is a prime number, 
-otherwise return 0*/
-int is_palindrome(char *s);/*7- returns 1 if a string is a palindrome and 0 if not*/
+int is_prime_number(int n);/*6- returns 1 iftheinputintegerisaprimenumber,*/
+/*otherwise return 0*/
+int is_palindrome(char *s);/*7-returns 1ifastringisapalindromeand 0ifnot*/
 
 #endif /* HOLBERTON_H */
