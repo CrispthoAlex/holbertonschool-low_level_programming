@@ -33,21 +33,18 @@ int main(int argc, char *argv[])
 	int i;
 	int add = 0;
 
-	if (agrc > 1)
+	for (i = 1; i < argc; i++)
 	{
-		for (i = 1; i < argc; i++)
+		if (_isdigit(argv[i])) /* is digit? */
 		{
-			if (_isdigit(argv[i])) /* is digit? */
-			{
-				add += atoi(argv[i]); /*sum position integer*/
-			}
-			else  /* contain symbols? */
-			{
-				printf("Error\n");
-				return (1);
-			}
+			add += atoi(argv[i]); /*sum position integer*/
 		}
-		printf("%d\n", add);
+		else  /* contain symbols? */
+		{
+			printf("Error\n");
+			return (1);
+		}
 	}
+	printf("%d\n", add);
 	return (0);
 }
