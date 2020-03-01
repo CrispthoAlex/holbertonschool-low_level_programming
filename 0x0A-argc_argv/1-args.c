@@ -11,7 +11,8 @@
 int main(int argc, char **argv)
 {
 	(void) argv;
-	printf("%d\n", argc); /* print size array / number of arguments */
+
+	printf("%d\n", (argc - 1)); /* print size array / number of arguments */
 
 return (0);
 
