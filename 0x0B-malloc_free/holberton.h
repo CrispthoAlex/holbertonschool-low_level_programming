@@ -85,4 +85,16 @@ int is_prime_number(int n);/*6- returns 1 iftheinputintegerisaprimenumber,*/
 /*otherwise return 0*/
 int is_palindrome(char *s);/*7-returns 1ifastringisapalindromeand 0ifnot*/
 
+/* 0x0B */
+char *create_array(unsigned int size, char c);/*0-creates an array of chars */
+char *_strdup(char *str);/*1- returns a pointer to a newly allocated space in */
+/*memory. Contains a copy of the string given as a parameter */
+char *str_concat(char *s1, char *s2);/*2-concatenates two strings */
+int **alloc_grid(int width, int height);/*3- returns a pointer to a 2 */
+/* dimensional array of integers.*/
+void free_grid(int **grid, int height);/*4-frees a 2 dimensional grid */
+/* previously created by your alloc_grid function */
+char *argstostr(int ac, char **av);/*5- concatenates all the arguments of your*/
+/* program */
+
 #endif /* HOLBERTON_H */
