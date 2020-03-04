@@ -11,23 +11,25 @@
  */
 char *_strdup(char *str)
 {
-	int i;
-	int size = 0; /*_strlen() - length string str */
+	int i = 0;
+	int size; /*_strlen() - length string str */
 	char *strcpy;
 
-	while (*(str + size) != '\0')
+	if (str == '\0')/* if size > 0 str ok */
+		return (NULL);
+	while (*(str + i) != '\0')
 	{
-		size++;
+		i++;
 	}
 
-	strcpy = malloc((size + 1) * sizeof(char));/*size + 1 include '\0'*/
+	size = i + 1;
+	strcpy = malloc(size * sizeof(char));/*size include '\0'*/
 
-	if (size == 0 || str == NULL || strcpy == NULL) /* size > 0 */
+	if (strcpy == NULL) /* if strcpy NULL*/
 		return (NULL);
-
-	for (i = 0; i < size; i++)
+	for (i = 0; i < size; i++)/* reinicialized i*/
 		strcpy[i] = str[i];
 
-	strcpy[i] = '\0';
+	strcpy[i + 1] = '\0';
 	return (strcpy);
 }
