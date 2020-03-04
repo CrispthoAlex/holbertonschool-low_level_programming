@@ -12,8 +12,8 @@
 char *str_concat(char *s1, char *s2)
 {
 	int i;
-	/*int j;*/
-	int size1, size2, size3; /*_strlen() - length string str */
+	int j;
+	int size1, size2;/*size3; /_strlen() - length string str */
 	char *strconcat;
 
 	if (s1)/* if size > 0 str ok */
@@ -37,10 +37,10 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	for (i = 0; i < size1; i++)/* reinicialized i*/
 		strconcat[i] = s1[i];
-	for (i = 0; i < size2; i++)/* j init in size1 */
-		strconcat[size1 + i] = s2[i];
+	for (j = 0; j < size2; j++, i++)/* j init in size1 */
+		strconcat[i] = s2[j];
 
-	size3 = size1 + size2;
-	strconcat[size3] = '\0';
+	/*size3 = size1 + size2;*/
+	strconcat[i] = '\0';
 	return (strconcat);
 }
