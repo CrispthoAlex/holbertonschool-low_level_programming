@@ -12,10 +12,14 @@
 char *_strdup(char *str)
 {
 	int i;
-	int size;
+	int size = 0; /*_strlen() - length string str */
 	char *strcpy;
 
-	size = _strlen(str);/*_strlen() - length string str */
+	while (*(str + size) != '\0')
+	{
+		size++;
+	}
+
 	strcpy = malloc((size + 1) * sizeof(char));/*size + 1 include '\0'*/
 
 	if (size == 0 || str == NULL || strcpy == NULL) /* size > 0 */
