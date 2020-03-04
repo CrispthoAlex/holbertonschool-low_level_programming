@@ -33,7 +33,7 @@ char *str_concat(char *s1, char *s2)
 	size2 = i + 1;/* size s2, include '\0' */
 
 	strconcat = malloc((size1 + size2) * sizeof(char));/*size2include'\0'*/
-	if (strconcat == NULL) /* if strconcat NULL*/
+	if (!strconcat) /* if strconcat NULL*/
 		return (NULL);
 	for (i = 0; i < size1; i++)/* reinicialized i*/
 		strconcat[i] = s1[i];
