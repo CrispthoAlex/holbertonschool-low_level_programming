@@ -16,31 +16,32 @@ char *str_concat(char *s1, char *s2)
 	int size1 = 0, size2 = 0, size3 = 0; /*_strlen() - length string str */
 	char *strconcat;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	if (s1)/* if size > 0 str ok */
 	{
-		i = 0;
-		while (s1[i] != '\0')
-			i++;
+		for (i = 0; s1[i] != '\0'; i++)
+		{}
 	}
 	size1 = i;
 
 	if (s2)/* if size2 > 0 s2 ok */
 	{
-		j = 0;
-		while (s2[j] != '\0')
-			j++;
+		for (j = 0; s2[j] != '\0'; j++)
+		{}
 	}
-	size2 = j;/* size s2, include '\0' */
-	size3 = size1 + size2;
+	size2 = j;/* size s2*/
 
+	size3 = size1 + size2;
 	strconcat = malloc((size3 * sizeof(char)) + 1);/*size2include'\0'*/
 	if (!strconcat) /* if strconcat NULL*/
 		return (NULL);
-	for (i = 0; i < size1; i++)/* reinicialized i*/
+	for (i = 0; s1[i] != '\0'; i++)/* reinicialized i*/
 		strconcat[i] = s1[i];
-	for (j = 0; j < size2; j++, i++)/* j init in size1 */
+	for (j = 0; i < size3 && s2[j] != '\0'; j++, i++)/* i=7 */
 		strconcat[i] = s2[j];
-
 	strconcat[size3 + 1] = '\0';
 	return (strconcat);
 }
