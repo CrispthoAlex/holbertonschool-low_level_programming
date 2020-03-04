@@ -18,6 +18,8 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == '\0')/* if size > 0 str ok */
 		return (NULL);
+	if (s2 == '\0')/* if size2 > 0 s2 ok */
+		return (NULL);
 	i = 0;
 	while (s1[i] != '\0')
 	{
@@ -25,8 +27,6 @@ char *str_concat(char *s1, char *s2)
 	}
 	size1 = i;/*size s1 */
 
-	if (s2 == '\0')/* if size2 > 0 s2 ok */
-		return (NULL);
 	i = 0;
 	while (s2[i] != '\0')
 	{
