@@ -16,21 +16,19 @@ char *str_concat(char *s1, char *s2)
 	int size1, size2, size3; /*_strlen() - length string str */
 	char *strconcat;
 
-	if (s1 == '\0')/* if size > 0 str ok */
-		return (NULL);
-	if (s2 == '\0')/* if size2 > 0 s2 ok */
-		return (NULL);
-	i = 0;
-	while (s1[i] != '\0')
+	if (s1)/* if size > 0 str ok */
 	{
-		i++;
+		i = 0;
+		while (s1[i] != '\0')
+			i++;
 	}
-	size1 = i;/*size s1 */
+	size1 = i;
 
-	i = 0;
-	while (s2[i] != '\0')
+	if (s2)/* if size2 > 0 s2 ok */
 	{
-		i++;
+		i = 0;
+		while (s2[i] != '\0')
+			i++;
 	}
 	size2 = i + 1;/* size s2, include '\0' */
 
