@@ -36,17 +36,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (n >= size2) /* n bytes s2 */
 		n = size2;
-	size3 = size1 + n;/* */
+	size3 = size1 + n;/* size3 dinamic for n */
 	strconcat = malloc((size3 * sizeof(char)) + 1);/*n=size2include'\0'*/
 	if (!strconcat) /* if strconcat NULL*/
 		return (NULL);
 
-	for (i = 0; s1[i] != '\0'; i++)/* reinicialized i*/
-		strconcat[i] = s1[i];
-	for (j = 0; i < size3 && j < n; j++, i++)
-/*i=size1,n-sizetostrconcat*/
-		strconcat[i] = s2[j];
+	for (i = 0; i < size1; i++)/* reinicialized i*/
+		*(strconcat + i) = s1[i];
+	for (i = 0, j = size1; i < size2 && j < size3; i++, j++)
+/*i<size1,n-sizetostrconcat*/
+		*(strconcat + j) = s2[i];
+	*(strconcat  + j) = '\0';
 
-	strconcat[size3 + 1] = '\0';
-	return (strconcat);
+	return (strconcat);/* comeback to first position */
 }
