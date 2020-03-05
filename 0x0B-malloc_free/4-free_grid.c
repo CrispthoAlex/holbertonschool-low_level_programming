@@ -11,9 +11,9 @@
  */
 void free_grid(int **grid, int height)
 {
-	int i = height; /* he */
+	int i = 0; /* he */
 
-	for  (; i >= 0; i--)/*releasedmemowherefailme*/
+	for  (i = 0; i < height; i++)/*releasedmemowherefailme*/
 		free(grid[i]);/* anoi tower */
 	free(grid);/* released p in memory | anoi tower*/
 }
