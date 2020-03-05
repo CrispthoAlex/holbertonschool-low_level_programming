@@ -43,8 +43,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	for (i = 0; s1[i] != '\0'; i++)/* reinicialized i*/
 		strconcat[i] = s1[i];
-	for (j = 0; i < size3 && s2[j] != '\0'; j++, i++)
-/*i=7n-sizetostrconcat*/
+	for (j = 0; i < size3 && j < n; j++, i++)
+/*i=size1,n-sizetostrconcat*/
 		strconcat[i] = s2[j];
 
 	strconcat[size3 + 1] = '\0';
