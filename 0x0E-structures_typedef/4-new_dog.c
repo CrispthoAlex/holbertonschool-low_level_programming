@@ -16,7 +16,6 @@ int _strlen(char *s)
 	{
 		i++;
 	}
-
 	return (i);
 }
 /**
@@ -47,8 +46,6 @@ char *_strcpy(char *dest, char *src)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-
-
 	dog_t *baddog; /* new dog/type*/
 	int ls1 = 0, ls2 = 0;/* lenght string 1 and 2*/
 	char *newname, *newowner;
