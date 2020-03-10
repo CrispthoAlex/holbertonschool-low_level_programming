@@ -35,7 +35,6 @@ char *_strcpy(char *dest, char *src)
 	dest[i] = '\0';
 
 	return (dest);
-
 }
 /**
  *new_dog - define a new type struct
@@ -52,19 +51,18 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	ls1 = _strlen(name);
 	ls2 = _strlen(owner);
-	newname = malloc(ls1 + 1);
+	newname = malloc(ls1 + 1);/*reserve memory*/
 	if (!newname) /* newname exists?*/
 	{
 		return (NULL);
 	}
-	newowner = malloc(ls2 + 1);
+	newowner = malloc(ls2 + 1);/*reserve memory*/
 	if (!newowner)/* newowner exists?*/
 	{
 		free(newname);/* frees newname memory*/
 		return (NULL);
 	}
-	baddog = malloc(sizeof(dog_t));
-
+	baddog = malloc(sizeof(dog_t));/*reserve memory*/
 	if (!baddog)/* frees newname and newowner memory*/
 	{
 		free(newname);
