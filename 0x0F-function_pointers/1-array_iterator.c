@@ -11,7 +11,7 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	size_t i;
 
-	if (action)
+	if (action && array)/* check if array && action exist */
 	{
 		for (i = 0; i < size; i++)
 			action(array[i]);/* pointer to each function */
