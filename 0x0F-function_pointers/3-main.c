@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 4)/* only takes argv[1] && argv[3] */
 	{
-		printf("Error");
+		printf("Error\n");
 		return (98);
 	}
 	n1 = atoi(argv[1]);
