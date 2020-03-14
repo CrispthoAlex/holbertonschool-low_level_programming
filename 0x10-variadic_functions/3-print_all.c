@@ -40,10 +40,13 @@ void ty_str(va_list varargum)
 
 	if (!varargum)
 		printstr = "(nil)";
-
 	printf("%s", printstr);
 }
-
+/**
+ * print_all - prints all types, anything
+ * @format: types arguments
+ * Return: Nothing.
+ */
 void print_all(const char * const format, ...)
 {
 /*selects the correct function to print asked type*/
@@ -70,10 +73,11 @@ void print_all(const char * const format, ...)
 			{/*verifiedformat*/
 				printf("%s", printsep);
 				optype[j].f(varglist);
+				printsep = ", ";
+				break;
 			}
 			j++;/*increase function*/
 		}
-		printsep = ", ";
 		i++;/*increase format/type*/
 	}
 	printf("\n");
