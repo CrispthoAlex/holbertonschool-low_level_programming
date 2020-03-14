@@ -80,6 +80,6 @@ void print_all(const char * const format, ...)
 		}
 		i++;/*increase format/type*/
 	}
-	printf("\n");
 	va_end(varglist); /*free varglist memory*/
+	printf("\n");
 }
