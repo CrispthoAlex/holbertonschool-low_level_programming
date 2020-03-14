@@ -36,10 +36,12 @@ void ty_float(va_list varargum)
  */
 void ty_str(va_list varargum)
 {
+	char *printstr = va_arg(varargum, char*);/*pointer to string*/
+
 	if (!varargum)
-		printf("(nil)");
-	else
-		printf("%s", va_arg(varargum, char*));
+		printstr = "(nil)";
+
+	printf("%s", printstr);
 }
 
 void print_all(const char * const format, ...)
