@@ -18,7 +18,7 @@ void ty_char(va_list varargum)
  */
 void ty_int(va_list varargum)
 {
-        printf("%d", va_arg(varargum, int));
+	printf("%d", va_arg(varargum, int));
 }
 /**
  * ty_float - prints float
@@ -27,7 +27,7 @@ void ty_int(va_list varargum)
  */
 void ty_float(va_list varargum)
 {
-        printf("%f", va_arg(varargum, double));
+	printf("%f", va_arg(varargum, double));
 }
 /**
  * ty_str - prints string/char*
@@ -39,19 +39,19 @@ void ty_str(va_list varargum)
 	if (!varargum)
 		printf("(nil)");
 	else
-        printf("%s", va_arg(varargum, char*));
+		printf("%s", va_arg(varargum, char*));
 }
 
 void print_all(const char * const format, ...)
 {
 /*selects the correct function to print asked type*/
 	tyarg_t optype[] = {/*optype */
-                {"c", ty_char}, /* prints char*/
-                {"i", ty_int}, /* prints integer*/
-                {"f", ty_float},/* prints float*/
-                {"s", ty_str},/* prints char * - string*/
-                {NULL, NULL}
-        };
+		{"c", ty_char}, /* prints char*/
+		{"i", ty_int}, /* prints integer*/
+		{"f", ty_float},/* prints float*/
+		{"s", ty_str},/* prints char * - string*/
+		{NULL, NULL}
+	};
 	va_list  varglist;/*list of type of arguments*/
 	unsigned int i = 0;
 	unsigned int j;
