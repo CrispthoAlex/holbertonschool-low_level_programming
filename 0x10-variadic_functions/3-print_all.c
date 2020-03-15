@@ -53,6 +53,11 @@ void ty_str(va_list varargum)
 void print_all(const char * const format, ...)
 {
 /*selects the correct function to print asked type*/
+	va_list  varglist;/*list of type of arguments*/
+	int i;
+	int j;
+	char *printsep = "";/*pointer to print separator*/
+
 	tyarg_t optype[] = {/*optype */
 		{"c", ty_char}, /* prints char*/
 		{"i", ty_int}, /* prints integer*/
@@ -60,11 +65,6 @@ void print_all(const char * const format, ...)
 		{"s", ty_str},/* prints char * - string*/
 		{NULL, NULL}
 	};
-	va_list  varglist;/*list of type of arguments*/
-	int i;
-	int j;
-	char *printsep = "";/*pointer to print separator*/
-
 	va_start(varglist, format);/*initialized list (format)*/
 
 	i = 0;
