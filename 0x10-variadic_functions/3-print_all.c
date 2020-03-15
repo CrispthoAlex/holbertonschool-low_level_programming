@@ -73,7 +73,7 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (optype[j].argformat != NULL)/*itera type arguments*/
 		{
-			if (*(optype[j].argformat) == format[i])
+			if (format[i] == *(optype[j].argformat))
 			{/*verifiedformat*/
 				printf("%s", printsep);
 				optype[j].f(varglist);
