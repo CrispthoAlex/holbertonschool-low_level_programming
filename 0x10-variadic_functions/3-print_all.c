@@ -36,10 +36,12 @@ void ty_float(va_list varargum)
  */
 void ty_str(va_list varargum)
 {
-	char *printstr = va_arg(varargum, char*);/*pointer to string*/
+	char *printstr = va_arg(varargum, char *);/*pointer to string*/
 
 	if (!varargum)
+	{
 		printstr = "(nil)";
+	}
 	printf("%s", printstr);
 }
 /**
@@ -58,18 +60,19 @@ void print_all(const char * const format, ...)
 		{NULL, NULL}
 	};
 	va_list  varglist;/*list of type of arguments*/
-	unsigned int i = 0;
-	unsigned int j;
+	int i;
+	int j;
 	char *printsep = "";/*pointer to print separator*/
 
 	va_start(varglist, format);/*initialized list (format)*/
 
+	i = 0;
 	while (format && format[i])
 	{
 		j = 0;
-		while (optype[j].argformat)/*verifiedintrotype*/
+		while (optype[j].argformat)/*itera type arguments*/
 		{
-			if (optype[j].argformat[0] == format[i])
+			if (*(optype[j].argformat) == format[i])
 			{/*verifiedformat*/
 				printf("%s", printsep);
 				optype[j].f(varglist);
