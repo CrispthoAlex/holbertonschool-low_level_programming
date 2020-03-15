@@ -39,7 +39,7 @@ void ty_str(va_list varargum)
 {
 	char *printstr = va_arg(varargum, char *);/*pointer to string*/
 
-	if (!varargum)
+	if (varargum == NULL)
 	{
 		printstr = "(nil)";
 	}
@@ -71,7 +71,7 @@ void print_all(const char * const format, ...)
 	while (format && format[i])
 	{
 		j = 0;
-		while (optype[j].argformat)/*itera type arguments*/
+		while (optype[j].argformat != NULL)/*itera type arguments*/
 		{
 			if (*(optype[j].argformat) == format[i])
 			{/*verifiedformat*/
