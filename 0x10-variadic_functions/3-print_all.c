@@ -39,7 +39,7 @@ void ty_str(va_list varargum)
 {
 	char *printstr = va_arg(varargum, char *);/*pointer to string*/
 
-	if (varargum == NULL)
+	if (printstr == NULL)
 	{
 		printstr = "(nil)";
 	}
@@ -54,8 +54,7 @@ void print_all(const char * const format, ...)
 {
 /*selects the correct function to print asked type*/
 	va_list  varglist;/*list of type of arguments*/
-	int i;
-	int j;
+	int i = 0, j;
 	char *printsep = "";/*pointer to print separator*/
 
 	tyarg_t optype[] = {/*optype */
@@ -67,7 +66,6 @@ void print_all(const char * const format, ...)
 	};
 	va_start(varglist, format);/*initialized list (format)*/
 
-	i = 0;
 	while (format && format[i])
 	{
 		j = 0;
