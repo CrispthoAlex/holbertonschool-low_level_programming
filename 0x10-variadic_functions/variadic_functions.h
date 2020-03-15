@@ -32,7 +32,7 @@ void print_strings(const char *separator, const unsigned int n, ...);
 typedef struct tyarg
 {
 	char *argformat;/* format of the argument*/
-	void (*f)(va_list list);
+	void (*f)();
 } tyarg_t;
 /**
  * print_all - returns the sum of all its parameters
