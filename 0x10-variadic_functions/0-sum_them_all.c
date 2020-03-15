@@ -12,16 +12,14 @@ int sum_them_all(const unsigned int argnum, ...)
 	int sumnum = 0; /*operator acmumulative*/
 	unsigned int i = 0;
 
-	va_start(varglist, argnum);
-
 	if (argnum == 0)
 		return (0);
+
+	va_start(varglist, argnum);
 	for ( ; i < argnum; i++)
 	{
 		sumnum += va_arg(varglist, int);
 	}
-	va_end(varglist); /*free varglist memory*/
-
+	/*va_end(varglist); free varglist memory*/
 	return (sumnum);
-
 }
