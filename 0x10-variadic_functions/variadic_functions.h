@@ -26,8 +26,7 @@ void print_strings(const char *separator, const unsigned int n, ...);
 
 /**
  * struct tyarg - Struct tyarg
- *
- * @tyarg: is type of arguments passed to the function
+ * @argformat: format of the arguments
  * @f: The function associated
  */
 typedef struct tyarg
