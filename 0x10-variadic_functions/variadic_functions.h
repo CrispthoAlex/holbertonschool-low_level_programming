@@ -4,6 +4,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
+ * struct tyarg - Struct tyarg
+ * @argformat: format of the arguments
+ * @f: The function associated
+ */
+typedef struct tyarg
+{
+	char *argformat;/* format of the argument*/
+	void (*f)();
+} tyarg_t;
+
+/**
  * sum_them_all - returns the sum of all its parameters
  * @n: numbers of arguments total
  * Return: Always 0
@@ -24,16 +35,6 @@ void print_numbers(const char *separator, const unsigned int n, ...);
  */
 void print_strings(const char *separator, const unsigned int n, ...);
 
-/**
- * struct tyarg - Struct tyarg
- * @argformat: format of the arguments
- * @f: The function associated
- */
-typedef struct tyarg
-{
-	char *argformat;/* format of the argument*/
-	void (*f)();
-} tyarg_t;
 /**
  * print_all - returns the sum of all its parameters
  *
