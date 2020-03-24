@@ -21,16 +21,16 @@ typedef struct listint_s
 
 int _putchar(char c);
 
-size_t print_listint(const listint_t *h);/*task 0*/
-size_t listint_len(const listint_t *h);/*task 1*/
-listint_t *add_nodeint(listint_t **head, const int n);/*task 2*/
-listint_t *add_nodeint_end(listint_t **head, const int n);/*task 3*/
-void free_listint(listint_t *head);/*task 4 */
-void free_listint2(listint_t **head); /*task 5*/
-int pop_listint(listint_t **head);/*task 6*/
-listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);/*task 7*/
-int sum_listint(listint_t *head);/*task 8*/
-listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);/*task 9*/
-int delete_nodeint_at_index(listint_t **head, unsigned int index);/*task 10*/
+size_t print_listint(const listint_t *h);
+size_t listint_len(const listint_t *h);
+listint_t *add_nodeint(listint_t **head, const int n);
+listint_t *add_nodeint_end(listint_t **head, const int n);
+void free_listint(listint_t *head);
+void free_listint2(listint_t **head);
+int pop_listint(listint_t **head);
+listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
+int sum_listint(listint_t *head);
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
+int delete_nodeint_at_index(listint_t **head, unsigned int index);
 
 #endif /* _LISTS_H_ */
