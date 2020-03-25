@@ -8,18 +8,19 @@
  * Return: the address of the new element
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
-{
-	listint_t *idxnode = NULL;
+{/*idxnode = new node , *help = temporal store*/
+	listint_t *idxnode = NULL, *help = NULL;
 	unsigned int i = 0;/*iterator for index*/
 
+	help = *head;
 	if (idx != 0)
 	{
-		for ( ; i < (idx - 1) && *head ; i++)
+		for ( ; i < (idx - 1) && help ; i++)
 		{
-			*head = (*head)->next;/*move the next of *head */
+			help = help->next;/*move the next of *head */
 		}
 	}
-	if (!*head && idx != 0)
+	if (!help && idx != 0)
 		return (NULL);
 
 	idxnode = malloc(sizeof(listint_t));/*reserved memory for idxnode*/
@@ -33,8 +34,8 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 	else
 	{
-		idxnode->next = (*head)->next;
-		(*head)->next = idxnode;
+		idxnode->next = help->next;
+		help->next = idxnode;
 	}
 	return (idxnode);
 }
