@@ -11,6 +11,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 	if (index < 64)/*System of 64 bits*/
 	{
 		*n = *n | 1 << index;/* left shift, positionbinary*2^k */
+		return (1);
 	}
 	return (-1);
 }
