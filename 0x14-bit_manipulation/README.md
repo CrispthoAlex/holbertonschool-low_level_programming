@@ -1,6 +1,6 @@
 # 0x14. C - Bit manipulation
 
-[](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/232/bitwise.PNG)
+![](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/232/bitwise.PNG)
 
 ## Learning Objectives
 At the end of this project, you are expected to be able to [explain to anyone](https://intranet.hbtn.io/rltoken/5AHj2uaArtz66WdzSI7H6g), without the help of [Google](www.google.com/):
