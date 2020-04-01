@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 		/* ## write content to file */
 		/* read bytes from file_from*/
 		fread = 1024;
-		while(fread == 1024)
+		while (fread == 1024)
 		{
 			fread = read(fopen, stroutin, 1024);
 			/* write content to file */
@@ -46,9 +46,9 @@ int main(int argc, char *argv[])
 		if (close(fopen) == -1)
 			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fopen), exit(100);
 		if (close(f2open) == -1)
-                        dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f2open), exit(100);
+			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f2open), exit(100);
 
 		return (0);
 	}
-	dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit (97);
+	dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 }
