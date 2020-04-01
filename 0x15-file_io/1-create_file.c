@@ -9,7 +9,7 @@
 int create_file(const char *filename, char *text_content)
 {
 	/* file descriptor, letters it could read (plen:length) and plett:print*/
-	ssize_t fcreate, plen = 0, plett  = 0;
+	int fcreate, plen = 0, plett  = 0;
 
 	if (filename)
 	{
