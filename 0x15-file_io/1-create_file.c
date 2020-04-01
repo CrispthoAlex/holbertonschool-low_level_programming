@@ -21,7 +21,7 @@ int create_file(const char *filename, char *text_content)
 			return (1);
 		/* ## write content file */
 		/* letters it could read */
-		for (; text_content[plen]; plen++)
+		for (; text_content[plen] != '\0'; plen++)
 		{}
 		/* write content of file */
 		plett = write(fcreate, text_content, plen);
