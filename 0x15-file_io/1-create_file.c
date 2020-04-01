@@ -14,7 +14,7 @@ int create_file(const char *filename, char *text_content)
 	if (filename)
 	{
 		/* create file */
-		fcreate = open(O_WRONLY | O_CREAT | O_TRUNC, 0600);
+		fcreate = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
 		/* 0600 = (S_IRUSR  00400 + S_IWUSR  00200) */
 		if (fcreate == -1)
 			return (-1);
