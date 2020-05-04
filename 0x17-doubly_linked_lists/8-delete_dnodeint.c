@@ -18,7 +18,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		{
 			*head = idxnode->next; /*store the address in head*/
 			if (idxnode->next)
-				(*head)->prev = NULL;
+				idxnode->prev = NULL;
 			free(idxnode);
 			return (1);
 		}
