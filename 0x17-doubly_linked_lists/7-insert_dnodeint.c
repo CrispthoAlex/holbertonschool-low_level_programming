@@ -20,27 +20,30 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (NULL);
 	}
 	idxnode->n = n;/* put in the data */
-
 	if (idx == 0) /*In the first node */
 	{
 		if (!help)
 			idxnode->next = NULL;
 		else
 		{
-			idxnode->next = help; /*Make next of new node as next of *head*/
-			help->prev = idxnode; /*move the prev of *headd as idxnode*/
+/*Make next of new node as next of *head | move the prev of *headd as idxnode*/
+			idxnode->next = help, help->prev = idxnode;
 		}
-		idxnode->prev = NULL; /* move prev of idxnode to NULL*/
-		*h = idxnode; /* take value of idxnode */
+		/* move prev of idxnode to NULL | take value of idxnode */
+		idxnode->prev = NULL, *h = idxnode;
 		return (idxnode);
 	}
-
-	for ( ; i < (idx - 1) && help ; i++)
+	for ( ; i < (idx - 1); i++)
 	{
+		if (!help)
+		{
+			free(idxnode);
+			return (NULL);
+		}
 		help = help->next;/*move the next of *head */
 	}
-	idxnode->next = help->next; /* same as head->next */
-	idxnode->prev = help;
+	/* same as head->next */
+	idxnode->next = help->next, idxnode->prev = help;
 	if (help->next) /* if not in NULL */
 		help->next->prev = idxnode;
 	help->next = idxnode;
