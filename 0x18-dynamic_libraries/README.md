@@ -1,7 +1,5 @@
 # 0x18. C - Dynamic libraries
 
-Foobar is a Python library for dealing with word pluralization.
-
 ## Resources
 
 #### Read or watch:
