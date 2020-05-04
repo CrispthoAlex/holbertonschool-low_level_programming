@@ -12,12 +12,14 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	dlistint_t *idxnode = NULL, *help = NULL;/* temporal*/
 
 	idxnode = *head;
-	if (*head)
+	if (*head/* || head*/)
 	{
 		if (index == 0)
 		{
-			*head = idxnode->next;/*store the address in head*/
-			(*head)->prev = NULL, free(idxnode);
+			*head = idxnode->next; /*store the address in head*/
+			if (idxnode->next)
+				idxnode->prev = NULL;
+			free(idxnode);
 			return (1);
 		}
 		while (idxnode && i < (index - 1))
