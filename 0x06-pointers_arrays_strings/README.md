@@ -1,43 +1,34 @@
-0x06. C - More pointers, arrays and strings
-______________________________________________________________________
-Requirements
-______________________________________________________________________
-General
-___________________________________
+# 0x06. C - [More pointers, arrays and strings](https://duckduckgo.com/?q=pointers%2C+arrays+and+strings&t=hj&ia=web)
+![](https://i1.wp.com/overiq.com/wp-content/uploads/2018/11/memory-representation-of-array-of-pointers-1504599930139.png?resize=615%2C454&quality=90&ssl=1)
+## Requirements
 
-Allowed editors: vi, vim, emacs
+### General
 
-All your files will be compiled on Ubuntu 14.04 LTS
+* Allowed editors: vi, vim, emacs
 
-Your programs and functions will be compiled with gcc 4.8.4 using the flags
--Wall -Werror -Wextra and -pedantic
+* All your files will be compiled on Ubuntu 14.04 LTS
 
-All your files should end with a new line
+* Your programs and functions will be compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
 
-A README.md file, at the root of the folder of the project is mandatory
+* All your files should end with a new line
 
-Your code should use the Betty style. It will be checked using betty-style.pl
-and betty-doc.pl
+* A README.md file, at the root of the folder of the project is mandatory
 
-You are not allowed to use global variables
+* Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
 
-No more than 5 functions per file
+* You are not allowed to use global variables
 
-You are not allowed to use the standard library. Any use of functions like
+* No more than 5 functions per file
+
+* You are not allowed to use the standard library. Any use of functions like
 printf, puts, etc is forbidden
 
-You are allowed to use _putchar
+* You are allowed to use [_putchar](https://github.com/holbertonschool/_putchar.c/blob/master/_putchar.c)
 
-You dont have to push _putchar.c, we will use our file. If you do it wont be
-taken into account
+* You dont have to push ``_putchar.c``, we will use our file. If you do it wont be taken into account
 
-In the following examples, the main.c files are shown as examples. You can use
-them to test your functions, but you dont have to push them to your repo (if
-you do we wont take them into account). We will use our own main.c files at
-compilation. Our main.c files might be different from the one shown in the
-examples
+* In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you dont have to push them to your repo (if you do we wont take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
 
-The prototypes of all your functions and the prototype of the function _putchar
-should be included in your header file called holberton.h
+* The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called ``holberton.h``
 
-Dont forget to push your header file
+* Dont forget to push your header file
