@@ -1,5 +1,5 @@
 # 0x1A. C - Hash tables
-
+![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpumpkinprogrammerdotcom4.files.wordpress.com%2F2014%2F06%2Fhash_tab_2.jpg&f=1&nofb=1)
 # Resources
 #### Read or watch:
 
