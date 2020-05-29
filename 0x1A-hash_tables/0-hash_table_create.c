@@ -12,6 +12,7 @@
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *htable = NULL;
+	unsigned long int i = 0;
 	/* Create **array with htable->size = size */
 
 	if (size  > 0)
@@ -21,14 +22,14 @@ hash_table_t *hash_table_create(unsigned long int size)
 			return (NULL);
 		/* Assignament size and array */
 		htable->size = size;
-		htable->array = calloc(size, sizeof(hash_node_t *));
+		htable->array = malloc(size * sizeof(hash_node_t *));
 		if (!htable->array)
 		{
 			free(htable);
 			return (NULL);
 		}
-		/*for (int i = 0; i < size; i++) clean each cell of this array*/
-		/*	htable->array[i] = NULL;*/
+		for (i = 0; i < size; i++) /*clean each cell of this array*/
+			htable->array[i] = NULL;
 
 		return (htable);
 	}
