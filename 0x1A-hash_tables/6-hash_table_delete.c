@@ -12,18 +12,18 @@ void hash_table_delete(hash_table_t *ht)
 
 	if (ht && ht->array)
 	{
-		for (index = 0; index < ht->size; index++)
+		while (index < ht->size)
 		{
 			tmp = ht->array[index];
 			while (tmp)
 			{
-
 				help = tmp->next;
 				free(tmp->key);
 				free(tmp->value);
 				free(tmp);
 				tmp = help;
 			}
+			index++;
 		}
 		free(ht->array);
 		free(ht);
