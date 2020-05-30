@@ -238,7 +238,6 @@ void shash_table_delete(shash_table_t *ht)
 			tmp = ht->array[index];
 			while (tmp)
 			{
-				printf("tmp[%s]: index[%lu]\n", tmp->key, index);
 				help = tmp->next;
 				free(tmp->key);
 				free(tmp->value);
