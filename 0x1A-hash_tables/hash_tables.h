@@ -83,10 +83,7 @@ typedef struct shash_table_s
 	shash_node_t *stail;
 } shash_table_t;
 
-/**
- * PHP hash tables functions
- *
- */
+
 shash_table_t *shash_table_create(unsigned long int size);
 void add_node_dll(shash_table_t *ht, shash_node_t *key_node);
 int shash_table_set(shash_table_t *ht, const char *key, const char *value);
