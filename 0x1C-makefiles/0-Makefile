@@ -1,0 +1,4 @@
+# target => all: dependecnies => None
+#		action => gcc (...)
+all :
+	gcc main.c holberton.c -o holberton
