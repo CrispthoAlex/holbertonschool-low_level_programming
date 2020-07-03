@@ -1,5 +1,3 @@
-# target => all: dependecnies => None
-#		action => gcc (...)
 CC = gcc
 SRC = main.c holberton.c
 
