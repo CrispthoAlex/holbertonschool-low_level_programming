@@ -9,8 +9,8 @@ def island_perimeter(grid):
     """
     A function that returns the perimeter of the island described in grid
     """
+    perimeter = 0
     if type(grid) is list:
-        perimeter = 0
         for row in range(len(grid)):
             for col in range(len(grid[row])):
                 if grid[row][col] == 1:
@@ -20,4 +20,4 @@ def island_perimeter(grid):
                     down = grid[row + 1][col] if row + \
                         1 < len(grid[row]) else 0
                     perimeter += 4 * grid[row][col] - (rig + lef + up + down)
-        return perimeter
+    return perimeter
