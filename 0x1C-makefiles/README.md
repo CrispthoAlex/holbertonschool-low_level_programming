@@ -32,4 +32,4 @@ In the following tasks, we are going to use [these files](https://github.com/hol
 
 ## Documentation
 
-[GNU make](https://www.gnu.org/software/make/manual/make.html)
+[**GNU make**](https://www.gnu.org/software/make/manual/make.html)
