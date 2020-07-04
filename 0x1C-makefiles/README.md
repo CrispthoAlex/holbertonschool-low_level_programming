@@ -1,9 +1,6 @@
 # 0x1C. C - Makefiles
 
-<p>
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvyexQnfUUOZS_2I1pWT5sa3XoBWvUxc\
-z3PQ591MN2ye_2A1UU&s" width="150%" height="150%">
-</p>
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvyexQnfUUOZS_2I1pWT5sa3XoBWvUxcz3PQ591MN2ye_2A1UU&s)
 
 ## Resources
 #### Read or watch:
@@ -32,3 +29,7 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 ## More Info
 ### Files
 In the following tasks, we are going to use [these files](https://github.com/holbertonschool/0x1B.c/blob/master/holberton.c). We want to compile these only.
+
+## Documentation
+
+[GNU make](https://www.gnu.org/software/make/manual/make.html)
