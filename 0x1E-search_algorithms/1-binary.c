@@ -16,20 +16,24 @@ int binary_search(int *array, size_t size, int value)
 	{
 		print_array(array, ileft, iright);
 
-		if (array[ileft] == value)
-			return (ileft);
-		else if (array[iright] != value)
-		{       /* Let's to search in middle position */
-			mid = (ileft + iright) / 2; /*  */
-			if (array[mid] > value)
-				iright = mid - 1;
-			else if (array[mid] < value)
-				ileft = mid + 1;
-			else /* array[mid] == value */
-				return (mid);
-		}
-		else /* (array[iright] == value) */
-			return (iright);
+		/**
+		 *   if (array[ileft] == value)
+		 *	return (ileft);
+		 *   else if (array[iright] != value)
+		 *   {  Let's to search in middle position
+		*/
+		mid = (ileft + iright) / 2; /*  */
+		if (array[mid] > value)
+			iright = mid - 1;
+		else if (array[mid] < value)
+			ileft = mid + 1;
+		else /* array[mid] == value */
+			return (mid);
+		/**
+		 *  }
+		 * else  --(array[iright] == value)--
+		 *	return (iright);
+		*/
 	}
 	return (-1);
 }
