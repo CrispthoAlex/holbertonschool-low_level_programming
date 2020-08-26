@@ -12,24 +12,24 @@ int binary_search(int *array, size_t size, int value)
 {
 	int ileft = 0, iright = (int)size - 1, mid = 0;
 
-	while (ileft <= iright)
+	while (array && ileft <= iright)
 	{
 		print_array(array, ileft, iright);
-		/* Let's to search in 0 and final position */
+
 		if (array[ileft] == value)
 			return (ileft);
-		else if (array[iright] == value)
-			return (iright);
-		else /* Let's to search in middle position */
-		{
+		else if (array[ileft] != value || array[iright] != value)
+		{       /* Let's to search in middle position */
 			mid = (ileft + iright) / 2; /*  */
-			if (array[mid] == value)
-				return (mid);
+			if (array[mid] > value)
+				iright = mid - 1;
 			else if (array[mid] < value)
 				ileft = mid + 1;
-			else  /* (array[mid] > value) */
-				iright = mid - 1;
+			else /* array[mid] == value */
+				return (mid);
 		}
+		else /* (array[iright] == value) */
+			return (iright);
 	}
 	return (-1);
 }
