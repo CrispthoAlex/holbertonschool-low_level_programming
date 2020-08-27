@@ -15,21 +15,21 @@ int jump_search(int *array, size_t size, int value)
 {
 	/*Liner search | jump search => ...*/
 	int inprev = 0; /* index previous*/
-	int size_block = sqrt((int)size); /* block size to search */
-	int step = size_block; /* this value can change*/
+	int limit = sqrt((int)size); /* limit of block */
+	int step = limit; /* this value can change*/
 
 	/* Obtain block to search */
-	while(array && array[MIN(step, (int)size) - 1] < value)
+	while (array && array[inprev] < value)
 	{
 		printf("Value checked array[%d] = [%d]\n", inprev, array[inprev]);
-
-		inprev = step;
-		step += size_block;
-		if (inprev >= (int)size)
+		if (inprev >= (int)size - 1 || array[step] >= value)
 			break;
+		inprev = step;
+		step += limit;
+
 	}
 
-	printf("Value found between indexes [%d] and [%d]\n",inprev, step);
+	printf("Value found between indexes [%d] and [%d]\n", inprev, step);
 	while (array && inprev < (int)size)
 	{
 		printf("Value checked array[%d] = [%d]\n", inprev, array[inprev]);
