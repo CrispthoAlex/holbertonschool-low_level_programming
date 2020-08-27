@@ -1,6 +1,9 @@
 #define MIN(X, Y) (((X) < (Y)) ? (X) : (Y))
 #include "search_algos.h"
 
+int aux_binary_rec(int *array, int low, int high, int value);
+
+
 /**
  * print_array - print array given
  * @array: *array is a pointer to the first element of the array
@@ -32,30 +35,45 @@ void print_array(int *array, int ileft, int iright)
  */
 int advanced_binary(int *array, size_t size, int value)
 {
-	int low = 0, high = (int)size, mid = 0;
+	int low = 0, high = (int)size - 1;
 
 	if (!array)
 		return (-1);
 	return (aux_binary_rec(array, low, high, value));
 }
 
+/**
+ * aux_binary_rec - helper function that searches for a value in a sorted array
+ * of integers
+ * @array: *array is a pointer to the first element of the array
+ * @low: lower limit of array
+ * @high: upper limit of array
+ * @value: is the value to search for
+ * Return: Index of value, else -1
+ */
+
 int aux_binary_rec(int *array, int low, int high, int value)
 {
-	if (low <= high && high <= (int)size)
+	int mid = 0;
+
+	if (low <= high)
 	{
-		print_array(array, low, high - 1);
+		print_array(array, low, high);
 		mid = low + (high - low) / 2;
-		if (array[mid] >= value) /* right side*/
+
+		if (array[mid] == value && array[mid - 1] != value)
+			return (mid);
+		if (array[mid] >= value) /* left side*/
 		{
-			high = mid + 1;
-			mid = advanced_binary(array, high, value);
+			high = mid;
+			mid = aux_binary_rec(array, low, high, value);
 		}
-		else if (array[mid] < value) /* left side */
+		else if (array[mid] < value) /* right side */
 		{
 			low = mid + 1;
-			mid = advanced_binary(array + low, size - mid - 1, value);
+			mid = aux_binary_rec(array, low, high, value);
 		}
-		/* array[mid] == value */
 		return (mid);
 	}
+	return (-1);
 }
