@@ -18,19 +18,20 @@ int jump_search(int *array, size_t size, int value)
 	int limit = sqrt((int)size); /* limit of block */
 	int step = limit; /* this value can change*/
 
+	if (!array)
+		return (-1);
 	/* Obtain block to search */
-	while (array && array[inprev] < value)
+	while (array[inprev] < value)
 	{
 		printf("Value checked array[%d] = [%d]\n", inprev, array[inprev]);
 		if (inprev >= (int)size - 1 || array[step] >= value)
 			break;
 		inprev = step;
 		step += limit;
-
 	}
 
 	printf("Value found between indexes [%d] and [%d]\n", inprev, step);
-	while (array && inprev < (int)size)
+	while (inprev < (int)size)
 	{
 		printf("Value checked array[%d] = [%d]\n", inprev, array[inprev]);
 		if (array[inprev] == value)
