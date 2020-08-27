@@ -22,13 +22,13 @@ int exponential_search(int *array, size_t size, int value)
 		low = 2 * low; /* update with power */
 	}
 
-	high = MIN(low, (int)size - 1);  /* 11 */
-	low  = low / 2; /* 8 */
+	high = MIN(low, (int)size - 1);
+	low  = low / 2;
 	printf("Value found between indexes [%d] and [%d]\n", low, high);
 	while (low <= high)
 	{
 		print_array(array, low, high);
-		mid = (low + high) / 2; /* 8 + 11 = 19/2 = ~9 | 10 + 11/2 = 10 */
+		mid = (low + high) / 2;
 		if (array[mid] > value)
 			high = mid - 1;
 		else if (array[mid] < value)
