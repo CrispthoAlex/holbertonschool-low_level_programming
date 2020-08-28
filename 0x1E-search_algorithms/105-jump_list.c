@@ -36,10 +36,10 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 		step += limit;
 	}
 
-	step = MIN(step, size - 1); /* Update to stay within index of list */
-	printf("Value found between indexes [%lu] and [%lu]\n", inprev, step);
+	/* step = MIN(step, size - 1); Update to stay within index of list */
+	printf("Value found between indexes [%lu] and [%lu]\n", inprev, temp->index);
 
-	while (head) /* && head->index <= step)*/
+	while (head) /* && head->index <= step) */
 	{
 		printf("Value checked at index [%lu] = [%d]\n", head->index, head->n);
 		if (head->n == value)
