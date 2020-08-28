@@ -22,7 +22,7 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 	if (!head)
 		return (NULL);
 
-	while (temp->express) /*|| head->next)*/
+	while (temp && temp->express) /*|| head->next)*/
 	{
 		/*if (head->express)   Update temp  */
 		head = temp;
@@ -33,7 +33,7 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 			printf(val_index, head->index, temp->index);
 			return (linear_search_aux(head, temp, value));
 		}
-		head = head->express;
+		/*head = head->express;*/
 	}
 	head = temp; /* step back to last express, no value in linked list */
 	while (temp->next)
