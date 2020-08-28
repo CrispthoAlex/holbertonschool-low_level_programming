@@ -17,7 +17,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	size_t inprev = 0; /* lower index of block*/
 	int limit = sqrt((int)size); /* limit of block */
 	size_t step = limit; /* this value can change*/
-	listint_t *temp = head;;
+	listint_t *temp = head;
 
 	if (!head)
 		return (NULL);
