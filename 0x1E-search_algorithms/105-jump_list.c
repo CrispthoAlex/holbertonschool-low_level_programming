@@ -17,19 +17,18 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	size_t inprev = 0; /* lower index of block*/
 	int limit = sqrt((int)size); /* limit of block */
 	size_t step = limit; /* this value can change*/
-	listint_t *temp = NULL;
+	listint_t *temp = head;;
 
 	if (!head)
 		return (NULL);
 	/* Obtain block to search */
 	while (head->next && head->n < value)  /*head->next &&   */
 	{
-		temp = head;
 		while (temp->next && temp->index < step)
 			temp = temp->next;
 		/*output in next node*/
 		printf("Value checked at index [%lu] = [%d]\n", temp->index, temp->n);
-		if (!temp || !temp->next || temp->n > value)  /* next node is > value */
+		if (!temp || !temp->next || temp->n >= value)  /* next node is > value */
 			break;
 		head = temp; /* update head */
 		inprev = step;
